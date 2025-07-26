@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav" id="nav">
+        <ul class="header__ul">
+          <li class="header__li">
+            <a href="#about">SOBRE</a>
+          </li>
+          <li class="header__li">
+            <a href="#skills">HABILIDADES</a>
+          </li>
+          <li class="header__li">
+            <a href="#work">PROJETOS</a>
+          </li>
+          <li class="header__li">
+            <a href="#contact">Contato</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-title-line">
+        <button class="menu-button" id="hamburguer_btn">
+          <span class="menu-icon"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="snap-container">
+      <section class="snap-section about" id="about">
+        <div class="snap-content">
+          <h2 class="about__h2">Henrique</h2>
+          <p>
+            Sou desenvolvedor fullstack júnior, com foco em front-end. Estou em
+            transição de carreira após me formar em engenharia civil e sigo
+            estudando para evoluir na área de tecnologia.
+          </p>
+        </div>
+        <figure>
+          <img
+            class="about__img"
+            src="./img/Me.png"
+            alt="Henrique Froener"
+            width="245"
+            height="245"
+          />
+        </figure>
+        <figcaption class="offscreen">Foto Henrique Froener</figcaption>
+      </section>
+
+      <section class="snap-section" id="skills">
+        <div class="snap-content">
+          <h2>Skills</h2>
+          <p>
+            Tenho mais experiência com front-end, especialmente em HTML, CSS e
+            JavaScript. Estou aprendendo frameworks como React e explorando o
+            back-end com Java.
+          </p>
+        </div>
+      </section>
+
+      <section class="snap-section" id="work">
+        <div class="snap-content projects">
+          <h2>Projetos</h2>
+          <p>
+            Pequenos projetos que me ajudaram a praticar e aprender mais sobre
+            desenvolvimento web.
+          </p>
+          <ul>
+            <li class="projects__li">
+              <a
+                class="projects__a"
+                href="https://github.com/Froener/Tic-Tac-Toe"
+              >
+                Jogo da Velha
+              </a>
+            </li>
+            <li class="projects__li">
+              <a
+                class="projects__a"
+                href="https://github.com/Froener/Rock-Paper-Scissors"
+              >
+                Pedra Papel Tesoura
+              </a>
+            </li>
+            <li class="projects__li">
+              <a
+                class="projects__a"
+                href="https://github.com/Froener/Lista_de_Compras/"
+                >Lista de Compras
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="snap-section" id="contact">
+        <div class="snap-content contact">
+          <h2>Contato</h2>
+          <p>Estou sempre a disposição para novas oportunidades</p>
+          <ul class="contact__ul">
+            <li class="contact__li">
+              <a
+                class="contact__a"
+                href="https://www.linkedin.com/in/henrique-fiuza-froener-dev/"
+                target="_blank"
+              >
+                <figure>
+                  <img
+                    src="./img/linkedin_icon.png"
+                    class="contact_img"
+                    alt=""
+                  />
+                </figure>
+                <figcaption class="contact__figcaption">
+                  Henrique Froener
+                </figcaption></a
+              >
+            </li>
+            <li class="contact__li">
+              <a
+                class="contact__a"
+                href="https://github.com/Froener"
+                target="_blank"
+                ><figure>
+                  <img src="./img/github_icon.png" class="contact_img" alt="" />
+                </figure>
+                <figcaption class="contact__figcaption">Froener</figcaption></a
+              >
+            </li>
+            <li class="contact__li">
+              <a class="contact__a" href="mailto:henriquefiuzafroener@gmail.com"
+                ><figure>
+                  <img src="./img/email_icon.png" class="contact_img" alt="" />
+                </figure>
+                <figcaption class="contact__figcaption">
+                  henriquefiuzafroener@gmail.com
+                </figcaption></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="footer snap-section" id="footer">
+        <p>Henrique Froener&copy;</p>
+      </footer>
+    </main>
+    <script>
+      const btn = document.getElementById("hamburguer_btn");
+      const nav = document.getElementById("nav");
+      document.addEventListener("click", (e) => {
+        if (
+          !nav.contains(e.target) &&
+          !btn.contains(e.target) &&
+          nav.classList.contains("open")
+        ) {
+          nav.classList.remove("open");
+        }
+      });
+      btn.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
